@@ -1,0 +1,2722 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "SyncOS_API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/Acesso/acessomega/{cnpj}": {
+      "get": {
+        "tags": [
+          "Acesso"
+        ],
+        "parameters": [
+          {
+            "name": "cnpj",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Acesso/Atualizacao/{ultima}/{cnpj}/{tipo}": {
+      "get": {
+        "tags": [
+          "Acesso"
+        ],
+        "parameters": [
+          {
+            "name": "ultima",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "cnpj",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tipo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Atualizacao"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Atualizacao"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Atualizacao"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Acesso/Bloqueio/{cnpj}": {
+      "get": {
+        "tags": [
+          "Acesso"
+        ],
+        "parameters": [
+          {
+            "name": "cnpj",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Acesso": {
+      "post": {
+        "tags": [
+          "Acesso"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Cliente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Cliente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Cliente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Boletos/evento/{inicio}/{fim}/{carteiraId}/{tipoData}": {
+      "get": {
+        "tags": [
+          "Boletos"
+        ],
+        "parameters": [
+          {
+            "name": "inicio",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fim",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "carteiraId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "tipoData",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListaEventos"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListaEventos"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListaEventos"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Boletos/evento": {
+      "post": {
+        "tags": [
+          "Boletos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BoletoEvento"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BoletoEvento"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BoletoEvento"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BoletoEvento"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BoletoEvento"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BoletoEvento"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Boletos/{carteiraId}/{sacadoId}/{cpfCnpj}/{tipoData}/{inicio}/{fim}/{statusId}/{centroReceitaId}": {
+      "get": {
+        "tags": [
+          "Boletos"
+        ],
+        "parameters": [
+          {
+            "name": "carteiraId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sacadoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "cpfCnpj",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tipoData",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "inicio",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "fim",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "statusId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "centroReceitaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Boletos": {
+      "get": {
+        "tags": [
+          "Boletos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Boleto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Boleto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Boleto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Boletos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Boleto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Boleto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Boleto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Boletos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Boleto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Boleto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Boleto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Boletos/{id}": {
+      "get": {
+        "tags": [
+          "Boletos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Boletos/pornumerodocumento/{id}": {
+      "get": {
+        "tags": [
+          "Boletos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Boletos/{carteiraId}/{inicio}/{fim}/{centroReceitaId}": {
+      "get": {
+        "tags": [
+          "Boletos"
+        ],
+        "parameters": [
+          {
+            "name": "carteiraId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "inicio",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "fim",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "centroReceitaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Boletos/extratoMovimentacao/{carteiraId}/{inicio}/{fim}/{centroReceitaId}/{doc}": {
+      "get": {
+        "tags": [
+          "Boletos"
+        ],
+        "parameters": [
+          {
+            "name": "carteiraId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "inicio",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fim",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "centroReceitaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "doc",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BoletoReport"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BoletoReport"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BoletoReport"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Boletos/cancelar/{id}": {
+      "put": {
+        "tags": [
+          "Boletos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Boletos/atualizarstatus/retorno": {
+      "put": {
+        "tags": [
+          "Boletos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Retorno"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Retorno"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Retorno"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Boletos/AtualizarStatus/boleto": {
+      "put": {
+        "tags": [
+          "Boletos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Boleto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Boleto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Boleto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Boleto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Carteira": {
+      "get": {
+        "tags": [
+          "Carteira"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Carteira"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Carteira"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Carteira"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Carteira/{id}": {
+      "get": {
+        "tags": [
+          "Carteira"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Carteira"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Carteira"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Carteira"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Cedente/cnpj/{cnpj}": {
+      "get": {
+        "tags": [
+          "Cedente"
+        ],
+        "parameters": [
+          {
+            "name": "cnpj",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cedente"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cedente"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cedente"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Cedente/PorDescricaoCarteira/{descricao}": {
+      "get": {
+        "tags": [
+          "Cedente"
+        ],
+        "parameters": [
+          {
+            "name": "descricao",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cedente"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cedente"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cedente"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CentroReceita": {
+      "get": {
+        "tags": [
+          "CentroReceita"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CentroReceita"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CentroReceita"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CentroReceita"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Generator/{nome}": {
+      "get": {
+        "tags": [
+          "Generator"
+        ],
+        "parameters": [
+          {
+            "name": "nome",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Retorno": {
+      "post": {
+        "tags": [
+          "Retorno"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Retorno"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Retorno"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Retorno"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Retorno"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Retorno"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Retorno"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Sacado/{id}/{cpfCnpj}": {
+      "get": {
+        "tags": [
+          "Sacado"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "cpfCnpj",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Sacado/filtrarSacado/{dataInicial}/{dataFinal}/{statusId}/{centroReceitaId}": {
+      "get": {
+        "tags": [
+          "Sacado"
+        ],
+        "parameters": [
+          {
+            "name": "dataInicial",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dataFinal",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "statusId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "centroReceitaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Sacado/desbloquear": {
+      "put": {
+        "tags": [
+          "Sacado"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sacado"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sacado"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sacado"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Sacado/bloquear": {
+      "put": {
+        "tags": [
+          "Sacado"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sacado"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sacado"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sacado"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Sacado/Avisar": {
+      "post": {
+        "tags": [
+          "Sacado"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sacado"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sacado"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sacado"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Sacado/AvisarAutomaticamente/{quantidadeDiasInicial}/{quantidadeDiasFinal}": {
+      "post": {
+        "tags": [
+          "Sacado"
+        ],
+        "parameters": [
+          {
+            "name": "quantidadeDiasInicial",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "quantidadeDiasFinal",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Sacado/BloquearAutomaticamente/{quantidadeDias}": {
+      "post": {
+        "tags": [
+          "Sacado"
+        ],
+        "parameters": [
+          {
+            "name": "quantidadeDias",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Sacado/revendaId/{id}": {
+      "get": {
+        "tags": [
+          "Sacado"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Sacado/cnpj/{cnpj}": {
+      "get": {
+        "tags": [
+          "Sacado"
+        ],
+        "parameters": [
+          {
+            "name": "cnpj",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Sacado/nome/{nome}": {
+      "get": {
+        "tags": [
+          "Sacado"
+        ],
+        "parameters": [
+          {
+            "name": "nome",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Sacado/{id}": {
+      "get": {
+        "tags": [
+          "Sacado"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Sacado": {
+      "get": {
+        "tags": [
+          "Sacado"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sacado"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/StatusTitulos": {
+      "get": {
+        "tags": [
+          "StatusTitulos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StatusTitulo"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StatusTitulo"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StatusTitulo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/StatusTitulos/{id}": {
+      "get": {
+        "tags": [
+          "StatusTitulos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusTitulo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusTitulo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusTitulo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Usuario/{loginName}/{loginPass}": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "parameters": [
+          {
+            "name": "loginName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "loginPass",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Usuario"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Usuario"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Usuario"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Atualizacao": {
+        "required": [
+          "ativo",
+          "backup",
+          "dataVersao",
+          "tipoAtualizacaoId",
+          "versao"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dataVersao": {
+            "type": "string",
+            "format": "date"
+          },
+          "versao": {
+            "type": "string"
+          },
+          "cnpj": {
+            "type": "string",
+            "nullable": true
+          },
+          "leiaMe": {
+            "type": "string",
+            "nullable": true
+          },
+          "script": {
+            "type": "string",
+            "nullable": true
+          },
+          "pacote": {
+            "type": "string",
+            "nullable": true
+          },
+          "pathDescompactar": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoAtualizacaoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "backup": {
+            "type": "string"
+          },
+          "ativo": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Boleto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "linhaDigitavel": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroDocumento": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoBarras": {
+            "type": "string",
+            "nullable": true
+          },
+          "nossoNumero": {
+            "type": "string",
+            "nullable": true
+          },
+          "emissao": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "vencimento": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "baixa": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "pagamento": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "valor": {
+            "type": "number",
+            "format": "double"
+          },
+          "percentualMulta": {
+            "type": "number",
+            "format": "double"
+          },
+          "moraDia": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorPago": {
+            "type": "number",
+            "format": "double"
+          },
+          "instrucoesLinha1": {
+            "type": "string",
+            "nullable": true
+          },
+          "instrucoesLinha2": {
+            "type": "string",
+            "nullable": true
+          },
+          "doc": {
+            "type": "string",
+            "nullable": true
+          },
+          "cancelado": {
+            "maxLength": 1,
+            "type": "string",
+            "nullable": true
+          },
+          "base64Pdf": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "sacadoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "statusId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "carteiraId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "usuarioId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remessaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sacado": {
+            "$ref": "#/components/schemas/Sacado"
+          },
+          "status": {
+            "$ref": "#/components/schemas/StatusTitulo"
+          },
+          "carteira": {
+            "$ref": "#/components/schemas/Carteira"
+          },
+          "usuario": {
+            "$ref": "#/components/schemas/Usuario"
+          },
+          "carteira_Descricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomePagador": {
+            "type": "string",
+            "nullable": true
+          },
+          "status_Descricao": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BoletoEvento": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "boletoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "arquivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoEvento": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BoletoReport": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numeroDocumento": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomePagador": {
+            "type": "string",
+            "nullable": true
+          },
+          "cpfCnpj": {
+            "type": "string",
+            "nullable": true
+          },
+          "emissao": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "vencimento": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "pagamento": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "valor": {
+            "type": "number",
+            "format": "double"
+          },
+          "oscilacao": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorPago": {
+            "type": "number",
+            "format": "double"
+          },
+          "statusId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sacadoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendedor": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "doc": {
+            "type": "string",
+            "nullable": true
+          },
+          "carteira": {
+            "type": "string",
+            "nullable": true
+          },
+          "valorSped": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorTef": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorBackup": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorManifesto": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorComissao": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Carteira": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "convenio": {
+            "type": "string",
+            "nullable": true
+          },
+          "dvConvenio": {
+            "type": "string",
+            "nullable": true
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoCarteira": {
+            "type": "string",
+            "nullable": true
+          },
+          "variacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "agencia": {
+            "type": "string",
+            "nullable": true
+          },
+          "dvAgencia": {
+            "type": "string",
+            "nullable": true
+          },
+          "banco": {
+            "type": "string",
+            "nullable": true
+          },
+          "dvBanco": {
+            "type": "string",
+            "nullable": true
+          },
+          "conta": {
+            "type": "string",
+            "nullable": true
+          },
+          "dvConta": {
+            "type": "string",
+            "nullable": true
+          },
+          "cedenteId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cedente": {
+            "$ref": "#/components/schemas/Cedente"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Cedente": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cpfCnpj": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "logradouro": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero": {
+            "type": "string",
+            "nullable": true
+          },
+          "complemento": {
+            "type": "string",
+            "nullable": true
+          },
+          "bairro": {
+            "type": "string",
+            "nullable": true
+          },
+          "cidade": {
+            "type": "string",
+            "nullable": true
+          },
+          "cep": {
+            "type": "string",
+            "nullable": true
+          },
+          "uf": {
+            "type": "string",
+            "nullable": true
+          },
+          "logoCedente": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CentroReceita": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Cliente": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "revendaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "razao": {
+            "type": "string",
+            "nullable": true
+          },
+          "fantasia": {
+            "type": "string",
+            "nullable": true
+          },
+          "cpF_CNPJ": {
+            "type": "string",
+            "nullable": true
+          },
+          "endereco": {
+            "type": "string",
+            "nullable": true
+          },
+          "bairro": {
+            "type": "string",
+            "nullable": true
+          },
+          "cep": {
+            "type": "string",
+            "nullable": true
+          },
+          "ufId": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero": {
+            "type": "string",
+            "nullable": true
+          },
+          "bloqueado": {
+            "type": "boolean"
+          },
+          "desativado": {
+            "type": "boolean"
+          },
+          "valorContrato": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorContratoBackup": {
+            "type": "number",
+            "format": "double"
+          },
+          "ultimaAtualizacao": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dataInclusao": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dataAlteracao": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "municipioId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "latitudeLongitude": {
+            "type": "string",
+            "nullable": true
+          },
+          "inscricaoEstadual": {
+            "type": "string",
+            "nullable": true
+          },
+          "chaveFlexDocs": {
+            "type": "string",
+            "nullable": true
+          },
+          "chaveCSC": {
+            "type": "string",
+            "nullable": true
+          },
+          "chaveManifesto": {
+            "type": "string",
+            "nullable": true
+          },
+          "whatsApp": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "resp_Nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "resp_Endereco": {
+            "type": "string",
+            "nullable": true
+          },
+          "resp_Numero": {
+            "type": "string",
+            "nullable": true
+          },
+          "resp_UF": {
+            "type": "string",
+            "nullable": true
+          },
+          "resp_Cidade": {
+            "type": "string",
+            "nullable": true
+          },
+          "resp_CEP": {
+            "type": "string",
+            "nullable": true
+          },
+          "resp_CPF": {
+            "type": "string",
+            "nullable": true
+          },
+          "valorTef": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorSped": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorManifesto": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorComissao": {
+            "type": "number",
+            "format": "double"
+          },
+          "vendedor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ListaEventos": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numeroDocumento": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomePagador": {
+            "type": "string",
+            "nullable": true
+          },
+          "cpfCnpj": {
+            "type": "string",
+            "nullable": true
+          },
+          "vencimento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "pagamento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "valor": {
+            "type": "number",
+            "format": "double"
+          },
+          "oscilacao": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorPago": {
+            "type": "number",
+            "format": "double"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "doc": {
+            "type": "string",
+            "nullable": true
+          },
+          "carteira": {
+            "type": "string",
+            "nullable": true
+          },
+          "valorSped": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorTef": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorBackup": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorManifesto": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorComissao": {
+            "type": "number",
+            "format": "double"
+          },
+          "data": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "arquivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusEvento": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoEvento": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Retorno": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numeroDocumento": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataPagamento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dataOcorrencia": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "baixa": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "codigoOcorrencia": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "boletoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sacadoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "valorPago": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sacado": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "fantasia": {
+            "type": "string",
+            "nullable": true
+          },
+          "cpfCnpj": {
+            "type": "string",
+            "nullable": true
+          },
+          "logradouro": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero": {
+            "type": "string",
+            "nullable": true
+          },
+          "complemento": {
+            "type": "string",
+            "nullable": true
+          },
+          "bairro": {
+            "type": "string",
+            "nullable": true
+          },
+          "cidade": {
+            "type": "string",
+            "nullable": true
+          },
+          "cep": {
+            "type": "string",
+            "nullable": true
+          },
+          "uf": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomeAvalista": {
+            "type": "string",
+            "nullable": true
+          },
+          "cpfCnpjAvalista": {
+            "type": "string",
+            "nullable": true
+          },
+          "isBloqueado": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isDesativado": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "centroReceitaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "valorContrato": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "vencimento": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "valor": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "idEmpresa": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "centroReceita": {
+            "$ref": "#/components/schemas/CentroReceita"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StatusTitulo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Usuario": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loginName": {
+            "type": "string",
+            "nullable": true
+          },
+          "loginPass": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          },
+          "perfilId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

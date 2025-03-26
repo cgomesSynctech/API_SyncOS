@@ -1,0 +1,1081 @@
+[
+  {
+    "ContainingType": "SyncOS_API.Controllers.AcessoController",
+    "Method": "Post",
+    "RelativePath": "Acesso",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cliente",
+        "Type": "Modelos.Cliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.AcessoController",
+    "Method": "AcessoMega",
+    "RelativePath": "Acesso/acessomega/{cnpj}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cnpj",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.AcessoController",
+    "Method": "Get",
+    "RelativePath": "Acesso/Atualizacao/{ultima}/{cnpj}/{tipo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ultima",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cnpj",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tipo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.Atualizacao",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.AcessoController",
+    "Method": "Get",
+    "RelativePath": "Acesso/Bloqueio/{cnpj}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cnpj",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "GetAll",
+    "RelativePath": "Boletos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Modelos.Boleto, SyncOS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "Post",
+    "RelativePath": "Boletos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "boleto",
+        "Type": "Modelos.Boleto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.Boleto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "Put",
+    "RelativePath": "Boletos",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "boleto",
+        "Type": "Modelos.Boleto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.Boleto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "ObterBoletos",
+    "RelativePath": "Boletos/{carteiraId}/{inicio}/{fim}/{centroReceitaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carteiraId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "inicio",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      },
+      {
+        "Name": "fim",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      },
+      {
+        "Name": "centroReceitaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "Filtrar",
+    "RelativePath": "Boletos/{carteiraId}/{sacadoId}/{cpfCnpj}/{tipoData}/{inicio}/{fim}/{statusId}/{centroReceitaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carteiraId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sacadoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cpfCnpj",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tipoData",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "inicio",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      },
+      {
+        "Name": "fim",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      },
+      {
+        "Name": "statusId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "centroReceitaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "PorId",
+    "RelativePath": "Boletos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.Boleto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "AtualizarStatus",
+    "RelativePath": "Boletos/AtualizarStatus/boleto",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "boleto",
+        "Type": "Modelos.Boleto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.Boleto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "AtualizarStatus",
+    "RelativePath": "Boletos/atualizarstatus/retorno",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "retorno",
+        "Type": "Modelos.Retorno",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.Boleto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "Cancelar",
+    "RelativePath": "Boletos/cancelar/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "PostEvento",
+    "RelativePath": "Boletos/evento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "evento",
+        "Type": "Modelos.BoletoEvento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.BoletoEvento",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "PorPeriodo",
+    "RelativePath": "Boletos/evento/{inicio}/{fim}/{carteiraId}/{tipoData}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inicio",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "fim",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "carteiraId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "tipoData",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IList\u00601[[Modelos.ListaEventos, SyncOS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "ExtratoMovimentacao",
+    "RelativePath": "Boletos/extratoMovimentacao/{carteiraId}/{inicio}/{fim}/{centroReceitaId}/{doc}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carteiraId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "inicio",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "fim",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "centroReceitaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "doc",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Modelos.BoletoReport, SyncOS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.BoletosController",
+    "Method": "PorNumeroDoc",
+    "RelativePath": "Boletos/pornumerodocumento/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.Boleto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.CarteiraController",
+    "Method": "GetAll",
+    "RelativePath": "Carteira",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Modelos.Carteira, SyncOS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.CarteiraController",
+    "Method": "PorId",
+    "RelativePath": "Carteira/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.Carteira",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.CedenteController",
+    "Method": "GetCNPJ",
+    "RelativePath": "Cedente/cnpj/{cnpj}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cnpj",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.Cedente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.CedenteController",
+    "Method": "PorDescricaoCarteira",
+    "RelativePath": "Cedente/PorDescricaoCarteira/{descricao}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "descricao",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.Cedente",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.CentroReceitaController",
+    "Method": "GetAll",
+    "RelativePath": "CentroReceita",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Modelos.CentroReceita, SyncOS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.GeneratorController",
+    "Method": "GetNextId",
+    "RelativePath": "Generator/{nome}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.RetornoController",
+    "Method": "Post",
+    "RelativePath": "Retorno",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "retorno",
+        "Type": "Modelos.Retorno",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.Retorno",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.SacadoController",
+    "Method": "GetAll",
+    "RelativePath": "Sacado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Modelos.Sacado, SyncOS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.SacadoController",
+    "Method": "Get",
+    "RelativePath": "Sacado/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Modelos.Sacado, SyncOS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.SacadoController",
+    "Method": "Filtrar",
+    "RelativePath": "Sacado/{id}/{cpfCnpj}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cpfCnpj",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.SacadoController",
+    "Method": "Avisar",
+    "RelativePath": "Sacado/Avisar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacado",
+        "Type": "Modelos.Sacado",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.SacadoController",
+    "Method": "AvisarAutomaticamente",
+    "RelativePath": "Sacado/AvisarAutomaticamente/{quantidadeDiasInicial}/{quantidadeDiasFinal}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "quantidadeDiasInicial",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "quantidadeDiasFinal",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.SacadoController",
+    "Method": "Bloquear",
+    "RelativePath": "Sacado/bloquear",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacado",
+        "Type": "Modelos.Sacado",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.SacadoController",
+    "Method": "BloquearAutomaticamente",
+    "RelativePath": "Sacado/BloquearAutomaticamente/{quantidadeDias}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "quantidadeDias",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.SacadoController",
+    "Method": "GetCNPJ",
+    "RelativePath": "Sacado/cnpj/{cnpj}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cnpj",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Modelos.Sacado, SyncOS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.SacadoController",
+    "Method": "Desbloquear",
+    "RelativePath": "Sacado/desbloquear",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacado",
+        "Type": "Modelos.Sacado",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.SacadoController",
+    "Method": "FiltrarSacado",
+    "RelativePath": "Sacado/filtrarSacado/{dataInicial}/{dataFinal}/{statusId}/{centroReceitaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dataInicial",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dataFinal",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "statusId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "centroReceitaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Modelos.Sacado, SyncOS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.SacadoController",
+    "Method": "GetNome",
+    "RelativePath": "Sacado/nome/{nome}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Modelos.Sacado, SyncOS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.SacadoController",
+    "Method": "GetEmpresaId",
+    "RelativePath": "Sacado/revendaId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Modelos.Sacado, SyncOS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.StatusTitulosController",
+    "Method": "GetAll",
+    "RelativePath": "StatusTitulos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Modelos.StatusTitulo, SyncOS_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.StatusTitulosController",
+    "Method": "PorId",
+    "RelativePath": "StatusTitulos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.StatusTitulo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SyncOS_API.Controllers.UsuarioController",
+    "Method": "Get",
+    "RelativePath": "Usuario/{loginName}/{loginPass}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "loginPass",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Modelos.Usuario",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
