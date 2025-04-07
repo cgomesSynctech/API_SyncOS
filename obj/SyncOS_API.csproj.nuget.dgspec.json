@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Desenv\\Fontes\\SyncBoletosNovo\\SyncOS_API\\SyncOS_API.csproj": {}
+    "C:\\Desenv\\Fontes\\SyncOS_Boletos\\API_SyncOS\\SyncOS_API.csproj": {}
   },
   "projects": {
-    "C:\\Desenv\\Fontes\\SyncBoletosNovo\\SyncOS_API\\SyncOS_API.csproj": {
+    "C:\\Desenv\\Fontes\\SyncOS_Boletos\\API_SyncOS\\SyncOS_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desenv\\Fontes\\SyncBoletosNovo\\SyncOS_API\\SyncOS_API.csproj",
+        "projectUniqueName": "C:\\Desenv\\Fontes\\SyncOS_Boletos\\API_SyncOS\\SyncOS_API.csproj",
         "projectName": "SyncOS_API",
-        "projectPath": "C:\\Desenv\\Fontes\\SyncBoletosNovo\\SyncOS_API\\SyncOS_API.csproj",
+        "projectPath": "C:\\Desenv\\Fontes\\SyncOS_Boletos\\API_SyncOS\\SyncOS_API.csproj",
         "packagesPath": "C:\\Users\\Cesar\\.nuget\\packages\\",
-        "outputPath": "C:\\Desenv\\Fontes\\SyncBoletosNovo\\SyncOS_API\\obj\\",
+        "outputPath": "C:\\Desenv\\Fontes\\SyncOS_Boletos\\API_SyncOS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

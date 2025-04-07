@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SyncOS_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+259ea5d0d3ea5b2e30bf985ea088a4a8a458899e")]
 [assembly: System.Reflection.AssemblyProductAttribute("SyncOS_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SyncOS_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

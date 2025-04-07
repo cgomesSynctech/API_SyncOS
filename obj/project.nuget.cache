@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VATJDIfCaTw=",
+  "dgSpecHash": "jenXtZ2UVVk=",
   "success": true,
-  "projectFilePath": "C:\\Desenv\\Fontes\\SyncBoletosNovo\\SyncOS_API\\SyncOS_API.csproj",
+  "projectFilePath": "C:\\Desenv\\Fontes\\SyncOS_Boletos\\API_SyncOS\\SyncOS_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cesar\\.nuget\\packages\\fluentassertions\\6.8.0\\fluentassertions.6.8.0.nupkg.sha512",
     "C:\\Users\\Cesar\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
